@@ -9,5 +9,16 @@ import { DUMMY_USERS } from './dummy-users';
 export class AppComponent {
  
   users = DUMMY_USERS;
+ 
+  //varabile
+  title = "Testing";
+
+  //Array
+  myArray = [1, 2, 3, 4, 5];
+
+  //function
+  displayTitle() {
+    return this.title;
+  }
   
 }
