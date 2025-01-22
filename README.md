@@ -1,27 +1,35 @@
-# MyApp
+# Appointment Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+This is a simple appointment management application built with Angular and Bootstrap. It allows users to create, view, and delete appointments. The application stores appointments in the browser's `localStorage` to persist data across page reloads.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Create New Appointment**:
+  - Users can create new appointments by entering a title and selecting a date.
+  - Form validation ensures that both fields are filled before adding an appointment.
+  - The appointment information is stored in the browser's localStorage.
 
-## Code scaffolding
+- **View Appointments**:
+  - Appointments are displayed in a **responsive table** format with columns for the appointment ID, title, and date.
+  - The appointments are retrieved from the localStorage and shown in the table.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Delete Appointment**:
+  - Each appointment has a **delete button** that allows users to remove the appointment from the list.
+  - The removed appointment is also deleted from localStorage to ensure consistency.
 
-## Build
+- **Responsive Design**:
+  - The layout is designed to be fully responsive, using **Bootstrap** grid classes (`row`, `col`, etc.) to adjust for different screen sizes.
+  - The form and table automatically adjust based on the screen size for better user experience.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Bootstrap Styling**:
+  - The application uses **Bootstrap** for consistent and clean styling, including cards, forms, buttons, tables, and more.
 
-## Running unit tests
+- **Local Storage**:
+  - Appointments are stored in **localStorage** to ensure that the data persists across page reloads.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- **Angular**: For building the frontend and managing dynamic data binding and form handling.
+- **Bootstrap**: For styling and making the application responsive.
+- **TypeScript**: For adding logic and data management.
+- **LocalStorage**: For persisting data on the client side.
