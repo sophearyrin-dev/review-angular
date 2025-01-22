@@ -1,4 +1,6 @@
 # Appointment Management Application
+![image](https://github.com/user-attachments/assets/9f2a775d-6764-4ea0-a364-9d87104fb9f0)
+
 
 This is a simple appointment management application built with Angular and Bootstrap. It allows users to create, view, and delete appointments. The application stores appointments in the browser's `localStorage` to persist data across page reloads.
 
