@@ -20,11 +20,7 @@ export class AppointmentListComponent implements OnInit{
     }
   }
 
-  appointment: Appointment[] = [
-    { id: 1, title: 'Meeting', date: new Date('2022-01-01') },
-    { id: 2, title: 'Conference', date: new Date('2022-01-05') },
-    { id: 3, title: 'Lunch', date: new Date('2022-01-10') }
-  ];
+  appointment: Appointment[] = [];
 
   
 

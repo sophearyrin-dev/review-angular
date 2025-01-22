@@ -1,13 +1,70 @@
-<div>
-  <input [(ngModel)]="appointmentTitle" placeholder="Enter title" />
-  <input [(ngModel)]="appointmentDate" placeholder="Select date" type="date" />
-  <button (click)="addAppointment()">Add appointment</button>
-</div>
-<div>
-  <ul *ngFor="let a of appointment; index as i">
-    <li>
-      {{ a.id }} {{ a.title }} {{ a.date | date : "dd.MM.yyyy" }}
-      <button (click)="deleteAppointment(i)">Delete</button>
-    </li>
-  </ul>
+<div class="container mt-4">
+  <!-- Create Appointment Card -->
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <h2>Create New Appointment</h2>
+        </div>
+      </div>
+      <!-- Appointment Form -->
+      <div class="mt-3">
+        <div class="mb-3">
+          <label for="appointmentTitle" class="form-label"
+            >Appointment Title</label
+          >
+          <input
+            id="appointmentTitle"
+            [(ngModel)]="appointmentTitle"
+            class="form-control"
+            placeholder="Enter title"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="appointmentDate" class="form-label"
+            >Appointment Date</label
+          >
+          <input
+            id="appointmentDate"
+            [(ngModel)]="appointmentDate"
+            class="form-control"
+            placeholder="Select date"
+            type="date"
+          />
+        </div>
+        <button (click)="addAppointment()" class="btn btn-primary">
+          Add Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Appointments List -->
+  <div class="mt-4">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of appointment; index as i">
+          <td>{{ a.id }}</td>
+          <td>{{ a.title }}</td>
+          <td>{{ a.date | date : "dd.MM.yyyy" }}</td>
+          <td>
+            <button
+              (click)="deleteAppointment(i)"
+              class="btn btn-danger btn-sm"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
