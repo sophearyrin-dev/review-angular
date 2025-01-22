@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from "./header/header.component";
 import { UserComponent } from './user/user.component';
 import { AppointmentListComponent } from './appointment-list/appointment-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppointmentListComponent } from './appointment-list/appointment-list.co
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeaderComponent
+    HeaderComponent,
+    FormsModule
 ],
   providers: [],
   bootstrap: [AppComponent]
